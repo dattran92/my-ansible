@@ -1,0 +1,17 @@
+- name: "Add lib apache php"
+  apt:
+    name: libapache2-mod-php
+
+- name: Update default alias for PHP
+  copy: 
+    content: |
+      <IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+      </IfModule>
+    dest: /etc/apache2/mods-enabled/dir.conf
+
+- name: "Restart apache"
+  service:
+    name: apache2
+    state: started
+
