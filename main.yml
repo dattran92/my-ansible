@@ -20,3 +20,9 @@
     - role: geerlingguy.php-versions
     - role: geerlingguy.php
     - role: phpconfig
+
+- name: Node
+  hosts: server
+  become: yes
+  roles:
+    - role: pablocrivella.nvm

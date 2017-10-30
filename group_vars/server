@@ -13,3 +13,7 @@ php_version: "5.6"
 php_memory_limit: "128M"
 php_max_execution_time: "90"
 php_upload_max_filesize: "256M"
+nvm_node_versions: 
+  - 8
+nvm_global_packages:
+  - pm2
